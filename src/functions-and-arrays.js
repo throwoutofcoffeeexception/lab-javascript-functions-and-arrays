@@ -22,7 +22,7 @@ function findLongestWord(words) {
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
-console.sum(numbers)
+console.log(sum(numbers))
 
 
 // Iteration #3.1 Bonus:
