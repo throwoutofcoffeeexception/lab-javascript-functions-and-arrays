@@ -13,12 +13,9 @@ function findLongestWord(words) {
   if (words.length == 0)
     return null;
 
-  if (words.length == 1)
-    return words[0];
-
   for (let i=0; i < words.length; i++)
   {
-    if (words[i] > longest)
+    if (words[i].length > longest)
     {
       longest = words[i];
       position = i;
@@ -51,7 +48,14 @@ function sumNumbers(numbers) {
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers(numbers) {
-  return sum(numbersAvg)/numbersAvg.length;
+
+  if (numbers.length == 0)
+    return null;
+
+  if (numbers.length == 1)
+    return numbers[0]
+
+  return sum(numbersAvg)/numbers.length;
 }
 
 // Level 2: Array of strings
@@ -92,7 +96,7 @@ uniquifyArray(wordsUnique)
 function uniquifyArray(wordsUni) {
   let newWords = [];
 
-  if (wordsUni == [])
+  if (wordsUni.length == 0)
   {
     return 0;
   }
@@ -121,14 +125,7 @@ function uniquifyArray(wordsUni) {
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
 function doesWordExist(wordToFind, wordsArray) {
-
-  wordsArray.forEach(element => {
-    if (wordToFind == element)
-    {
-      return true;
-    }
-  });
-  return false;
+  return wordsArray.includes(wordToFind);
 }
 
 // Iteration #7: Count repetition
